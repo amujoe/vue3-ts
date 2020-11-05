@@ -1,4 +1,4 @@
-import {Menu} from "@/types/menu.ts"
+import { Menu } from "@/types/menu.ts"
 
 /*
  * @Author: amujoe
@@ -11,8 +11,8 @@ const menuList: Array<Menu> = [
       "ename": "work",
       "path": "/work",
       "icon": "",
-      "description": "is_show 是否在菜单中展示",
-      "is_show": true,
+      "description": "isShow 是否在菜单中展示",
+      "isShow": true,
       "subset": []
     },
     {
@@ -21,7 +21,7 @@ const menuList: Array<Menu> = [
       "path": "/demo",
       "icon": "",
       "description": "完整的 demo 演示",
-      "is_show": true,
+      "isShow": true,
       "subset": []
     },
     {
@@ -30,7 +30,7 @@ const menuList: Array<Menu> = [
       "path": "/components",
       "icon": "",
       "description": "所有项目",
-      "is_show": true,
+      "isShow": true,
       "subset": [
         {
           "cname": "按钮",
@@ -38,7 +38,7 @@ const menuList: Array<Menu> = [
           "path": "/button",
           "icon": "",
           "description": "按钮演示",
-          "is_show": true,
+          "isShow": true,
           "subset": []
         },
         {
@@ -47,7 +47,7 @@ const menuList: Array<Menu> = [
           "path": "/form",
           "icon": "",
           "description": "表单",
-          "is_show": true,
+          "isShow": true,
           "subset": []
         }
       ]
@@ -58,7 +58,7 @@ const menuList: Array<Menu> = [
       "icon": "",
       "path": "/setting",
       "description": "设置账号",
-      "is_show": true,
+      "isShow": true,
       "subset": []
     }
   ]

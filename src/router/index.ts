@@ -1,45 +1,34 @@
 import { createRouter, createWebHistory, RouteRecordRaw } from 'vue-router'
-import Home from '../views/Home.vue'
-import List from '../views/List.vue'
-import Render from '../views/Render/Render'
-import Setup from '../views/Setup/Index.vue'
-import NextTick from '../views/NextTick/NextTick.vue'
+// import { Menu, Router } from "@/types/menu.ts"
+// import Home from '../views/Home.vue'
+import NoPage from '@/components/Default/NoPage.vue'
+import Login from '@/components/Login/Login.vue'
+// import List from '../views/List.vue'
+// import Render from '../views/Render/Render'
+// import Setup from '../views/Setup/Index.vue'
+// import NextTick from '../views/NextTick/NextTick.vue'
+import Collect from "./Collect"
+import Layout from "@/views/Layout.vue";
 
 const routes: Array<RouteRecordRaw> = [
   {
     path: '/',
-    name: 'Home',
-    component: Home
+    name: 'Login',
+    component: Login
   },
   {
-    path: '/about',
-    name: 'About',
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-    component: () => import(/* webpackChunkName: "about" */ '../views/About.vue')
+    path: "/myapp",
+    component: Layout,
+    children: [...Collect]
   },
   {
-    path: '/list',
-    name: 'List',
-    component: List
-  },
-  {
-    path: '/render',
-    name: 'Render',
-    component: Render
-  },
-  {
-    path: '/setup',
-    name: 'Setup',
-    component: Setup
-  },
-  {
-    path: '/next-tick',
-    name: 'NextTick',
-    component: NextTick
+    path: '/nopage',
+    name: 'NoPage',
+    component: NoPage
   },
 ]
+
+console.log('routes', routes);
 
 const router = createRouter({
   history: createWebHistory(process.env.BASE_URL),
