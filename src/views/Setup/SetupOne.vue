@@ -129,7 +129,7 @@ export default (page);
 </script>
 
 
-<style lang="scss" scoped>
+<style lang="less" scoped>
 .content{
     width: 500px;
     margin: 50px auto;

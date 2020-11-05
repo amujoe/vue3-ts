@@ -56,7 +56,7 @@ export default defineComponent({
 </script>
 
 
-<style lang="scss" scoped>
+<style lang="less" scoped>
 .list{
     width: 500px;
     margin: 50px auto;

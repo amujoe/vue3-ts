@@ -55,7 +55,7 @@ export default {
 </script>
 
 
-<style lang="scss">
+<style lang="less">
 .my-button{
     display: inline-block;
     padding: 0 5px;
