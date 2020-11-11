@@ -12,11 +12,13 @@
                     v-for="(menu, idx) in sub.subset"
                     :key="menu.path"
                     :title="menu.cname"
+                    @click="goPage"
                 ) {{menu.cname}}
             a-menu-item(
                 v-else
                 :key="sub.path"
                 :title="sub.cname"
+                @click="goPage"
                 ) {{sub.cname}}
 
 </template>
@@ -43,6 +45,9 @@ export default class Sidebar extends Vue {
         console.log("e", item)
         console.log("e", key)
         console.log("e", keyPath)
+        this.$router.push({
+            name: "/myapp"
+        })
     }
 
 }

@@ -13,18 +13,25 @@ import Layout from "@/views/Layout.vue";
 const routes: Array<RouteRecordRaw> = [
   {
     path: '/',
-    name: 'Login',
+    name: 'login',
     component: Login
   },
   {
     path: "/myapp",
+    name: "myapp",
     component: Layout,
     children: [...Collect]
   },
   {
     path: '/nopage',
-    name: 'NoPage',
+    name: 'nopage',
     component: NoPage
+  },
+  {
+    path: "/:catchAll(.*)",
+    redirect: {
+      name: "nopage"
+    }
   },
 ]
 
